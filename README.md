@@ -38,20 +38,7 @@ Channels analyzed:
 - **Power BI** – Data modeling, DAX measures, KPI dashboards
 - Cohort retention calculation using month-over-month user activity tracking
 - ARPU and revenue aggregation by acquisition channel
-- ## SQL Implementation
-
-Although visualization was performed in Power BI, core metrics can be derived using SQL aggregation and cohort logic.
-
-### 1. Activation Rate by Channel
-
-```sql
-SELECT 
-    channel,
-    COUNT(CASE WHEN activated = 1 THEN user_id END) * 1.0 
-        / COUNT(user_id) AS activation_rate
-FROM campaign_data
-GROUP BY channel;
-
+- **SQL Implementation**
 
 ---
 
